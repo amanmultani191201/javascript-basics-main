@@ -1,0 +1,32 @@
+.validation-form {
+  perspective: 800px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  visibility: hidden;
+  transform: translate3d(0, -5px, 0);
+  transition: transform 0.3s;
+}
+
+.validation-form input:invalid + .error-message,
+.validation-form textarea:invalid + .error-message {
+  visibility: visible;
+  transform: translate3d(0, 0, 0);
+}
+
+.validation-form button {
+  transform: translate3d(0, 0, -30px);
+  transition: transform 0.3s;
+}
+
+.validation-form button:hover {
+  transform: translate3d(0, 0, -50px);
+}

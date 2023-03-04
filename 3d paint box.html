@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3D Paint Box</title>
+    <style>
+      .paint-box {
+        perspective: 500px; /* Set the perspective of the 3D space */
+      }
+      
+      .paint-box__cube {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        transform-style: preserve-3d; /* Set the transform style to preserve 3D */
+        transform: rotateX(20deg) rotateY(30deg); /* Rotate the cube in 3D space */
+      }
+      
+      .paint-box__cube__face {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: #b00300;
+        opacity: 0.8;
+      }
+      
+      .paint-box__cube__face--top {
+        transform: rotateX(-90deg) translateZ(50px); /* Position the top face */
+      }
+      
+      .paint-box__cube__face--front {
+        transform: translateZ(50px); /* Position the front face */
+      }
+      
+      .paint-box__cube__face--left {
+        transform: rotateY(-90deg) translateZ(50px); /* Position the left face */
+      }
+      
+      .paint-box__cube__face--right {
+        transform: rotateY(90deg) translateZ(50px); /* Position the right face */
+      }
+      
+      .paint-box__cube__face--bottom {
+        transform: rotateX(90deg) translateZ(50px); /* Position the bottom face */
+      }
+      
+      .paint-box__cube__face--back {
+        transform: rotateY(180deg) translateZ(50px); /* Position the back face */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="paint-box">
+      <div class="paint-box__cube">
+        <div class="paint-box__cube__face paint-box__cube__face--top"></div>
+        <div class="paint-box__cube__face paint-box__cube__face--front"></div>
+        <div class="paint-box__cube__face paint-box__cube__face--left"></div>
+        <div class="paint-box__cube__face paint-box__cube__face--right"></div>
+        <div class="paint-box__cube__face paint-box__cube__face--bottom"></div>
+        <div class="paint-box__cube__face paint-box__cube__face--back"></div>
+      </div>
+    </div>
+  </body>
+</html>
